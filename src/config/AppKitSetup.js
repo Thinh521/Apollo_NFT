@@ -15,6 +15,13 @@ const config = defaultConfig({metadata});
 
 const chains = [
   {
+    chainId: 5080,
+    name: 'Pione Zero',
+    currency: 'PIONE',
+    explorerUrl: 'https://zeroscan.org',
+    rpcUrl: 'https://rpc.zeroscan.org',
+  },
+  {
     chainId: 1,
     name: 'Ethereum',
     currency: 'ETH',
@@ -27,13 +34,6 @@ const chains = [
     currency: 'MATIC',
     explorerUrl: 'https://polygonscan.com',
     rpcUrl: 'https://polygon-rpc.com',
-  },
-  {
-    chainId: 5080,
-    name: 'Pione Zero',
-    currency: 'PIONE',
-    explorerUrl: 'https://zeroscan.org',
-    rpcUrl: 'https://rpc.zeroscan.org',
   },
 ];
 

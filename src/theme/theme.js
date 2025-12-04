@@ -1,47 +1,72 @@
-import {Platform} from 'react-native';
 import {scale} from '../utils/scaling';
 
 export const Colors = {
-  // Core
+  // Core Colors
   white: '#FFFFFF',
   black: '#000000',
   primary: '#1C51FE',
   secondary: '#9333EA',
+
+  // Background Colors
   background: '#FFFFFF',
-  overlay: 'rgba(0, 0, 0, 0.4)',
+  deepBackground: '#F8FAFC',
+  surfaceBackground: '#F1F5F9',
+  mutedBackground: '#f4f4f4ff',
 
-  // Card & surfaces
-  cardBackground: '#F9FAFB',
-  cardBorder: '#E5E7EB',
-  grayBackground: '#F3F4F6',
+  // Gradient Colors
+  gradientStart: '#1C51FE',
+  gradientEnd: '#9333EA',
+  gradientPurpleStart: '#9333EA',
+  gradientPurpleEnd: '#C026D3',
+  gradientBlueStart: '#1C51FE',
+  gradientBlueEnd: '#3B82F6',
 
-  // Borders
-  border: '#D1D5DB',
-  borderMuted: '#E6EDFF',
-  borderLight: '#B0FFCE',
-  borderTertiary: '#E5E7EB',
+  // Accent Colors
+  accent: '#06B6D4',
+  accentPurple: '#A78BFA',
+  accentBlue: '#60A5FA',
+  accentPink: '#F472B6',
 
-  // Text
-  textPrimary: '#111827',
-  textSecondary: '#4B5563',
-  textMuted: '#9CA3AF',
-  textLight: '#6B7280',
-  title: '#212121',
-  inputText: '#374151',
+  // Border Colors
+  border: '#E2E8F0',
+  borderLight: '#F1F5F9',
+  borderAccent: 'rgba(28, 81, 254, 0.2)',
+  borderGlow: 'rgba(147, 51, 234, 0.2)',
 
-  // Status / Feedback
+  // Text Colors
+  textPrimary: '#0F172A',
+  textSecondary: '#334155',
+  textMuted: '#64748B',
+  textDark: '#1E293B',
+  textGradient: ['#1C51FE', '#9333EA'],
+
+  // Status Colors
   success: '#10B981',
-  successText: '#047857',
-  greenLight: '#E6F4EA',
+  successLight: '#34D399',
+  successDark: '#059669',
   error: '#EF4444',
-  redColor: '#DC2626',
+  errorLight: '#F87171',
+  errorDark: '#DC2626',
+  warning: '#F59E0B',
+  warningLight: '#FBBF24',
+  info: '#06B6D4',
 
-  // UI / Elements
-  headerBackground: '#50CFA1',
-  bottomSheetHandle: '#D1D5DB',
-  disabledText: '#A0A0A0',
-  disabledBorder: '#D1D5DB',
-  disabledBackground: '#F3F4F6',
+  // Overlay & Shadow
+  overlay: 'rgba(15, 23, 42, 0.4)',
+  overlayLight: 'rgba(15, 23, 42, 0.2)',
+  shadowColor: '#1C51FE',
+  glowColor: 'rgba(28, 81, 254, 0.3)',
+
+  // Feature Card Colors
+  featureIconBg: 'rgba(28, 81, 254, 0.15)',
+  featureIconBgPurple: 'rgba(147, 51, 234, 0.15)',
+  featureIconBgCyan: 'rgba(6, 182, 212, 0.15)',
+
+  // Interactive States
+  hover: 'rgba(28, 81, 254, 0.05)',
+  pressed: 'rgba(28, 81, 254, 0.1)',
+  disabled: '#E2E8F0',
+  disabledText: '#94A3B8',
 };
 
 export const FontSizes = {
@@ -54,6 +79,7 @@ export const FontSizes = {
   xlarge: scale(22),
   xxlarge: scale(24),
   huge: scale(26),
+  massive: scale(32),
 };
 
 export const FontWeights = {
@@ -64,6 +90,7 @@ export const FontWeights = {
   semiBold: '600',
   bold: '700',
   extraBold: '800',
+  black: '900',
 };
 
 export const Shadows = {
@@ -75,11 +102,8 @@ export const Shadows = {
     elevation: 1,
   },
   medium: {
-    shadowColor: '#4c63d2',
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
+    shadowColor: '#1C51FE',
+    shadowOffset: {width: 0, height: 4},
     shadowOpacity: 0.3,
     shadowRadius: 8,
     elevation: 6,
@@ -87,32 +111,28 @@ export const Shadows = {
   heavy: {
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 4},
-    shadowOpacity: 0.2,
-    shadowRadius: 6,
-    elevation: 6,
+    shadowOpacity: 0.4,
+    shadowRadius: 12,
+    elevation: 8,
   },
-  extraHeavy: {
-    shadowColor: '#000',
-    shadowOffset: {width: 0, height: 6},
-    shadowOpacity: 0.25,
-    shadowRadius: 10,
+  glow: {
+    shadowColor: '#1C51FE',
+    shadowOffset: {width: 0, height: 0},
+    shadowOpacity: 0.6,
+    shadowRadius: 20,
+    elevation: 12,
+  },
+  purpleGlow: {
+    shadowColor: '#9333EA',
+    shadowOffset: {width: 0, height: 0},
+    shadowOpacity: 0.5,
+    shadowRadius: 16,
     elevation: 10,
   },
-  dropdown: {
-    ...Platform.select({
-      android: {elevation: 5},
-      ios: {
-        shadowColor: '#000',
-        shadowOffset: {width: 0, height: 2},
-        shadowOpacity: 0.15,
-        shadowRadius: 4,
-      },
-    }),
-  },
   card: {
-    shadowColor: '#b2b2b2ff',
-    shadowOffset: {width: 0, height: 6},
-    shadowOpacity: 0.1,
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 8},
+    shadowOpacity: 0.3,
     shadowRadius: 24,
     elevation: 10,
   },

@@ -10,6 +10,7 @@ import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 import './src/config/AppKitSetup';
 import AppNavigator from './src/navigation';
 import SplashScreen from './src/screens/Splash';
+import {navigationRef} from './src/navigation/NavigationService';
 
 const queryClient = new QueryClient();
 
@@ -32,7 +33,7 @@ export default function App() {
     <GestureHandlerRootView style={{flex: 1}}>
       <QueryClientProvider client={queryClient}>
         <SafeAreaProvider>
-          <NavigationContainer>
+          <NavigationContainer ref={navigationRef}>
             <AppNavigator initialRouteName={initialRoute} />
             <FlashMessage position="top" />
             <AppKit />

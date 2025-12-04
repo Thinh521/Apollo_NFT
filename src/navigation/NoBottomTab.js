@@ -18,7 +18,7 @@ export default function NoBottomTab() {
           <Stack.Screen
             key={name}
             name={name}
-            component={(component, hasLayout)}
+            component={component}
             options={options}
           />
         ),

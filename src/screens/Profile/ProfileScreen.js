@@ -1,12 +1,24 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 
 import styles from './Profile.styles';
+import {Button} from '../../components/ui/Button';
+import {useNavigation} from '@react-navigation/core';
 
 const ProfileScreen = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
-      <Text>ProfileScreen</Text>
+      <Button.Main
+        title="Connect wallet"
+        style={{width: 200}}
+        onPress={() => {
+          navigation.navigate('NoBottomTab', {
+            screen: 'ConnectWallet',
+          });
+        }}
+      />
     </View>
   );
 };
