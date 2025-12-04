@@ -1,12 +1,15 @@
 import React from 'react';
+import {useNavigation} from '@react-navigation/core';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+
 import {getRouterBottomTab} from '../router/routerBottomTab';
 import CustomTabBar from '../components/CustomNavigation/CustomTabBar';
 
 const Tab = createBottomTabNavigator();
 
 const BottomTab = () => {
-  const routerBottomTab = getRouterBottomTab();
+  const navigation = useNavigation();
+  const routerBottomTab = getRouterBottomTab(navigation);
 
   return (
     <Tab.Navigator

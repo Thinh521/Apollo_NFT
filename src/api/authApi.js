@@ -1,6 +1,6 @@
 import axiosInstance from './axiosInstance';
 
-export const loginRequest = async addressWallet => {
+export const getLoginNonceApi = async addressWallet => {
   try {
     const res = await axiosInstance.post('/api/authentication/login', {
       addressWallet,
@@ -13,7 +13,7 @@ export const loginRequest = async addressWallet => {
   }
 };
 
-export const signatureRequest = async (addressWallet, signature) => {
+export const verifyWalletSignatureApi = async (addressWallet, signature) => {
   try {
     const res = await axiosInstance.post('/api/authentication/signature', {
       addressWallet,
