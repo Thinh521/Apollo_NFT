@@ -24,7 +24,7 @@ import {
   UserHeaderSkeleton,
 } from '~/components/Skeleton/ConnectWalletSkeleton';
 import {formatAddress} from '~/utils/formatAddress';
-import {loginRequest, signatureRequest} from '~/api/authApi';
+import {getLoginNonceApi, verifyWalletSignatureApi} from '~/api/authApi';
 import {Colors} from '~/theme/theme';
 import styles from './ConnectWallet.styles';
 import {
@@ -104,7 +104,7 @@ const ConnectWalletScreen = () => {
 
     setAuthenticating(true);
     try {
-      const loginRes = await loginRequest(address);
+      const loginRes = await getLoginNonceApi(address);
       const nonce = loginRes?.data?.nonce;
       if (!nonce) {
         throw new Error('Invalid nonce');
@@ -122,7 +122,7 @@ const ConnectWalletScreen = () => {
         throw new Error('This wallet does not support message signing');
       }
 
-      const verifyRes = await signatureRequest(address, signature);
+      const verifyRes = await verifyWalletSignatureApi(address, signature);
 
       const {user: userData, accessToken} = verifyRes.data;
 

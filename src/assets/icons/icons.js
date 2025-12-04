@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Svg, {Path} from 'react-native-svg';
+import Svg, {Circle, ClipPath, Defs, G, Path, Rect} from 'react-native-svg';
 
 export const HomeLineIcon = ({style = {}}) => {
   const width = style?.width || 24;
@@ -301,6 +301,113 @@ export const NetworkLineIcon = ({style = {}}) => {
       xmlns="http://www.w3.org/2000/svg"
       style={style}>
       <Path d="M5 11H19V5H5V11ZM21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4ZM19 13H5V19H19V13ZM7 15H10V17H7V15ZM7 7H10V9H7V7Z" />
+    </Svg>
+  );
+};
+
+export const BackIcon = ({style = {}}) => {
+  const width = style?.width || 16;
+  const height = style?.height || 16;
+  const color = style?.color || '#000';
+
+  return (
+    <Svg
+      width={width}
+      height={height}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={style}>
+      <G clipPath="url(#clip0_2205_9678)">
+        <Path
+          d="M6.40625 1.08764C6.76562 1.24702 7 1.60639 7 2.00014V4.00014H10.5C13.5375 4.00014 16 6.46264 16 9.50014C16 13.0408 13.4531 14.622 12.8687 14.9408C12.7906 14.9845 12.7031 15.0001 12.6156 15.0001C12.275 15.0001 12 14.722 12 14.3845C12 14.1501 12.1344 13.9345 12.3062 13.7751C12.6 13.5001 13 12.9501 13 12.0033C13 10.347 11.6562 9.00327 10 9.00327H7V11.0033C7 11.397 6.76875 11.7564 6.40625 11.9158C6.04375 12.0751 5.625 12.0095 5.33125 11.747L0.33125 7.24702C0.121875 7.05327 0 6.78452 0 6.50014C0 6.21577 0.121875 5.94702 0.33125 5.75639L5.33125 1.25639C5.625 0.990766 6.04688 0.925141 6.40625 1.08764Z"
+          fill={color}
+        />
+      </G>
+      <Defs>
+        <ClipPath id="clip0_2205_9678">
+          <Path d="M0 0H16V16H0V0Z" fill={color} />
+        </ClipPath>
+      </Defs>
+    </Svg>
+  );
+};
+
+export const EditIcon = ({style = {}}) => {
+  const width = style?.width || 24;
+  const height = style?.height || 24;
+  const color = style?.color || '#000';
+
+  return (
+    <Svg
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill={color}
+      xmlns="http://www.w3.org/2000/svg"
+      style={style}>
+      <Path d="M18.5293 15.3193C18.7058 14.8934 19.2942 14.8934 19.4707 15.3193L19.7236 15.9307C20.1556 16.9735 20.9615 17.8062 21.9746 18.2568L22.6914 18.5762C23.1022 18.7589 23.1022 19.3564 22.6914 19.5391L21.9326 19.877C20.9449 20.3163 20.1534 21.1194 19.7139 22.1279L19.4668 22.6934C19.2863 23.1075 18.7136 23.1075 18.5332 22.6934L18.2861 22.1279C17.8466 21.1194 17.0551 20.3163 16.0674 19.877L15.3076 19.5391C14.8974 19.3562 14.8974 18.759 15.3076 18.5762L16.0254 18.2568C17.0385 17.8062 17.8444 16.9735 18.2764 15.9307L18.5293 15.3193ZM17.1426 11.0967L7.24219 20.9961H3V16.7539L12.8994 6.85451L17.1426 11.0967ZM16.4346 3.31838C16.8251 2.92785 17.4591 2.92785 17.8496 3.31838L20.6777 6.14748C21.0681 6.53802 21.0682 7.17108 20.6777 7.56154L18.5566 9.68263L14.3135 5.44044L16.4346 3.31838Z" />
+    </Svg>
+  );
+};
+
+export const PlusIcon = ({style = {}}) => {
+  const width = style?.width || 13;
+  const height = style?.height || 13;
+  const color = style?.color || '#000';
+
+  return (
+    <Svg
+      width={width}
+      height={height}
+      viewBox="0 0 13 13"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={style}>
+      <Path
+        d="M7.5 1C7.5 0.446875 7.05312 0 6.5 0C5.94688 0 5.5 0.446875 5.5 1V5.5H1C0.446875 5.5 0 5.94688 0 6.5C0 7.05312 0.446875 7.5 1 7.5H5.5V12C5.5 12.5531 5.94688 13 6.5 13C7.05312 13 7.5 12.5531 7.5 12V7.5H12C12.5531 7.5 13 7.05312 13 6.5C13 5.94688 12.5531 5.5 12 5.5H7.5V1Z"
+        fill={color}
+      />
+    </Svg>
+  );
+};
+
+export const CheckIcon = ({style = {}}) => {
+  const width = style?.width || 24;
+  const height = style?.height || 24;
+  const color = style?.color || '#fff';
+
+  return (
+    <Svg
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke={color}
+      strokeWidth={3}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      xmlns="http://www.w3.org/2000/svg"
+      style={style}>
+      <Path d="M9.9997 15.1709L19.1921 5.97852L20.6063 7.39273L9.9997 17.9993L3.63574 11.6354L5.04996 10.2212L9.9997 15.1709Z" />
+    </Svg>
+  );
+};
+
+export const RightIcon = ({style = {}}) => {
+  const width = style?.width || 24;
+  const height = style?.height || 24;
+  const color = style?.color || '#fff';
+
+  return (
+    <Svg
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill={color}
+      xmlns="http://www.w3.org/2000/svg"
+      style={style}>
+      <Path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z" />
     </Svg>
   );
 };

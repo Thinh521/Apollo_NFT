@@ -1,3 +1,4 @@
+import {TouchableOpacity} from 'react-native';
 import {
   ActivityFillIcon,
   ActivityLineIcon,
@@ -9,15 +10,18 @@ import {
   ProductLineIcon,
   ProfileFillIcon,
   ProfileLineIcon,
+  SettingLineIcon,
 } from '../assets/icons/icons';
 import ActivityScreen from '../screens/Activity';
+
+import {Colors} from '../theme/theme';
 
 import HomeScreen from '../screens/Home';
 import NewsScreen from '../screens/News';
 import ProductScreen from '../screens/Product';
 import ProfileScreen from '../screens/Profile';
 
-export const getRouterBottomTab = () => [
+export const getRouterBottomTab = navigation => [
   {
     name: 'Home',
     component: HomeScreen,
@@ -74,8 +78,21 @@ export const getRouterBottomTab = () => [
     iconFill: ProfileFillIcon,
     hasLayout: true,
     options: {
-      headerShown: false,
+      headerShown: true,
+      headerTitle: 'My Profile',
       requiresAuth: true,
+
+      headerRight: () => (
+        <TouchableOpacity
+          style={{marginRight: 16}}
+          onPress={() =>
+            navigation.navigate('NoBottomTab', {
+              screen: 'ConnectWallet',
+            })
+          }>
+          <SettingLineIcon style={{color: Colors.black}} />
+        </TouchableOpacity>
+      ),
     },
   },
 ];
