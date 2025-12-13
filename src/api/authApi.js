@@ -1,0 +1,28 @@
+import axiosInstance from './axiosInstance';
+
+export const getLoginNonceApi = async addressWallet => {
+  try {
+    const res = await axiosInstance.post('/api/authentication/login', {
+      addressWallet,
+    });
+
+    return res.data;
+  } catch (error) {
+    console.error('Login request failed:', error);
+    throw error.response?.data || {message: 'Login request failed'};
+  }
+};
+
+export const verifyWalletSignatureApi = async (addressWallet, signature) => {
+  try {
+    const res = await axiosInstance.post('/api/authentication/signature', {
+      addressWallet,
+      signature,
+    });
+
+    return res.data;
+  } catch (error) {
+    console.error('Signature request failed:', error);
+    throw error.response?.data || {message: 'Signature request failed'};
+  }
+};

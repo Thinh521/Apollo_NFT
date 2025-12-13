@@ -1,0 +1,252 @@
+import {StyleSheet} from 'react-native';
+import {scale} from '~/utils/scaling';
+import {Colors, FontSizes, FontWeights, Shadows} from '~/theme/theme';
+
+export default StyleSheet.create({
+  safe: {
+    flex: 1,
+    backgroundColor: Colors.background,
+  },
+  container: {
+    flex: 1,
+    backgroundColor: Colors.background,
+  },
+  backgroundContainer: {
+    height: scale(180),
+    backgroundColor: Colors.mutedBackground,
+  },
+  backgroundImage: {
+    width: '100%',
+    height: '100%',
+  },
+  cameraBox: {
+    bottom: scale(16),
+    right: scale(16),
+  },
+  cameraIcon: {
+    color: Colors.black,
+  },
+  profileSection: {
+    paddingHorizontal: scale(20),
+    marginTop: scale(-50),
+  },
+  avatarContainer: {
+    position: 'relative',
+    alignSelf: 'center',
+    marginBottom: scale(20),
+  },
+  avatar: {
+    width: scale(100),
+    height: scale(100),
+    borderRadius: scale(999),
+    borderWidth: 5,
+    borderColor: Colors.white,
+    ...Shadows.medium,
+  },
+  verifiedBadge: {
+    position: 'absolute',
+    bottom: scale(2),
+    right: scale(2),
+    backgroundColor: Colors.white,
+    borderRadius: scale(999),
+    padding: scale(4),
+    ...Shadows.medium,
+  },
+  nameSection: {
+    alignItems: 'center',
+    marginBottom: scale(12),
+  },
+  nameCheck: {
+    gap: scale(8),
+    alignItems: 'center',
+    flexDirection: 'row',
+    marginBottom: scale(6),
+  },
+  displayName: {
+    color: Colors.textPrimary,
+    fontSize: FontSizes.large,
+    fontWeight: FontWeights.black,
+    letterSpacing: 0.5,
+  },
+  checkBadge: {
+    backgroundColor: Colors.primary,
+    borderRadius: 999,
+    width: scale(20),
+    height: scale(20),
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  checkIcon: {
+    width: scale(12),
+    height: scale(12),
+  },
+  username: {
+    color: Colors.textMuted,
+    fontSize: FontSizes.medium,
+    fontWeight: FontWeights.medium,
+  },
+  bio: {
+    paddingHorizontal: scale(24),
+    color: Colors.textMuted,
+    fontSize: FontSizes.small,
+    lineHeight: 20,
+    textAlign: 'center',
+    marginBottom: scale(20),
+  },
+  metaInfo: {
+    gap: scale(10),
+    marginBottom: scale(24),
+  },
+  metaItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: scale(8),
+    backgroundColor: Colors.deepBackground,
+    paddingVertical: scale(10),
+    paddingHorizontal: scale(16),
+    borderRadius: scale(12),
+    borderWidth: 1,
+    borderColor: Colors.border,
+  },
+  metaText: {
+    color: Colors.textPrimary,
+    fontSize: FontSizes.small,
+    fontWeight: FontWeights.medium,
+  },
+  socialLinks: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    gap: scale(12),
+    marginBottom: scale(24),
+  },
+  socialButton: {
+    borderWidth: 1,
+    borderRadius: 999,
+    borderColor: Colors.border,
+    backgroundColor: Colors.deepBackground,
+    ...Shadows.light,
+  },
+  actionButtons: {
+    flexDirection: 'row',
+    gap: scale(12),
+    marginBottom: scale(24),
+  },
+  followButton: {
+    flex: 1,
+  },
+  followingButton: {
+    borderWidth: 2,
+    backgroundColor: Colors.white,
+    borderColor: Colors.primary,
+  },
+  followButtonText: {
+    color: Colors.white,
+    fontWeight: FontWeights.bold,
+    fontSize: FontSizes.regular,
+  },
+  followingButtonText: {
+    color: Colors.primary,
+    fontWeight: FontWeights.bold,
+    fontSize: FontSizes.regular,
+  },
+  messageButton: {
+    flex: 1,
+    borderRadius: scale(14),
+    height: scale(52),
+    backgroundColor: Colors.deepBackground,
+    borderWidth: 1.5,
+    borderColor: Colors.border,
+  },
+  messageButtonText: {
+    color: Colors.textPrimary,
+    fontWeight: FontWeights.bold,
+    fontSize: FontSizes.regular,
+  },
+  statsContainer: {
+    flexDirection: 'row',
+    borderWidth: 1,
+    borderRadius: scale(16),
+    padding: scale(16),
+    marginBottom: scale(24),
+    borderColor: Colors.border,
+    backgroundColor: Colors.deepBackground,
+  },
+  statItem: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  statValue: {
+    color: Colors.textPrimary,
+    fontSize: FontSizes.xlarge,
+    fontWeight: FontWeights.black,
+    marginBottom: scale(4),
+  },
+  statLabel: {
+    color: Colors.textMuted,
+    fontSize: FontSizes.xsmall,
+    fontWeight: FontWeights.semiBold,
+    textTransform: 'uppercase',
+  },
+  statDivider: {
+    width: 1,
+    backgroundColor: Colors.border,
+    marginHorizontal: scale(8),
+  },
+  tabsContainer: {
+    backgroundColor: Colors.deepBackground,
+    borderWidth: 1,
+    borderColor: Colors.border,
+    borderRadius: scale(16),
+    marginBottom: scale(24),
+    overflow: 'hidden',
+    paddingVertical: scale(6),
+    paddingHorizontal: scale(6),
+  },
+  tab: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: scale(8),
+    paddingVertical: scale(14),
+    paddingHorizontal: scale(18),
+    borderRadius: scale(12),
+  },
+  activeTab: {
+    backgroundColor: Colors.primary,
+  },
+  tabText: {
+    color: Colors.textMuted,
+    fontSize: FontSizes.small,
+    fontWeight: FontWeights.semiBold,
+  },
+  activeTabText: {
+    color: Colors.white,
+    fontWeight: FontWeights.bold,
+  },
+  sectionHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: scale(20),
+    paddingHorizontal: scale(4),
+  },
+  title: {
+    fontSize: FontSizes.small,
+    fontWeight: FontWeights.bold,
+    color: Colors.textPrimary,
+    letterSpacing: 1.5,
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: scale(60),
+  },
+  loadingText: {
+    marginTop: scale(16),
+    fontSize: FontSizes.medium,
+    color: Colors.textMuted,
+    fontWeight: FontWeights.medium,
+  },
+});
