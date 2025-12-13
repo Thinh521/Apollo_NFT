@@ -1,5 +1,5 @@
 import {useInfiniteQuery} from '@tanstack/react-query';
-import {getAllNewsApi} from '../api/NewsApi';
+import {getAllNewsApi} from '../api/newsApi';
 
 export const useNews = () => {
   const {

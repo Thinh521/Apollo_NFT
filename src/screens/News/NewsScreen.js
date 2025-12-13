@@ -23,7 +23,7 @@ import FeaturedNewsCarousel from './components/FeaturedNewsCard';
 import {useNews} from '~/hook/useNews';
 import {useCategories} from '~/hook/useCategories';
 
-import {deleteNewsApi} from '~/api/NewsApi';
+import {deleteNewsApi} from '~/api/newsApi';
 
 import {Colors} from '~/theme/theme';
 import {scale} from '~/utils/scaling';

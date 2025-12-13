@@ -21,7 +21,7 @@ import {Input} from '~/components/ui/Input';
 import {Button} from '~/components/ui/Button';
 
 import {useCategories} from '~/hook/useCategories';
-import {createNewsApi, updateNewsApi} from '~/api/NewsApi';
+import {createNewsApi, updateNewsApi} from '~/api/newsApi';
 
 import {scale} from '~/utils/scaling';
 import {ERROR_MESSAGES} from '~/utils/errors/blockchainErrors';
