@@ -256,7 +256,7 @@ const ActivityScreen = () => {
       />
       <Header title="Activity" showSearch={false} />
 
-      {!isLoading ? (
+      {isLoading ? (
         <View style={{padding: scale(16)}}>
           <CreatorTabSkeleton itemCount={4} />
           <CreatorCardSkeleton itemCount={2} />
